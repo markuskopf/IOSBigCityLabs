@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -42,7 +43,7 @@
         return UIStatusBarStyleLightContent;
     }
     else {
-        return UIStatusBarStyleDefault;
+        return UIStatusBarStyleLightContent;
     }
 }
 

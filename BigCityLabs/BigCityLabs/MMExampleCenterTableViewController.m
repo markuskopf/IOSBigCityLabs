@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
 //                                                 green:208.0/255.0
 //                                                  blue:208.0/255.0
 //                                                 alpha:1.0]];
-    [backView setBackgroundColor:[UIColor blueColor]];
+    [backView setBackgroundColor:[UIColor darkGrayColor]];
     
     
     [self.tableView setBackgroundView:backView];
