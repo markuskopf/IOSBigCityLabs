@@ -1,29 +1,16 @@
-// Copyright (c) 2013 Mutual Mobile (http://mutualmobile.com/)
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  MMExampleCenterTableViewController.m
+//  BigCityLabs
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Created by Markus Kopf on 22/02/14.
+//  Copyright (c) 2014 Markus Kopf. All rights reserved.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
 
 #import "MMExampleCenterTableViewController.h"
 #import "MMExampleDrawerVisualStateManager.h"
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"
-#import "MMLogoView.h"
 #import "MMCenterTableViewCell.h"
 #import "MMExampleLeftSideDrawerViewController.h"
 #import "MainNavigationViewController.h"
@@ -73,15 +60,17 @@ typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
     
 
     [self setupLeftMenuButton];
-    [self setupRightMenuButton];
+//    [self setupRightMenuButton];
     
     if(OSVersionIsAtLeastiOS7()){
-        UIColor * barColor = [UIColor
-                              colorWithRed:247.0/255.0
-                              green:249.0/255.0
-                              blue:250.0/255.0
-                              alpha:1.0];
-        [self.navigationController.navigationBar setBarTintColor:barColor];
+//        UIColor * barColor = [UIColor
+//                              colorWithRed:247.0/255.0
+//                              green:249.0/255.0
+//                              blue:250.0/255.0
+//                              alpha:1.0];
+
+        
+        [self.navigationController.navigationBar setBarTintColor:[UIColor darkGrayColor]];
     }
     else {
         UIColor * barColor = [UIColor
@@ -92,17 +81,17 @@ typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
         [self.navigationController.navigationBar setTintColor:barColor];
     }
     
-    
-    MMLogoView * logo = [[MMLogoView alloc] initWithFrame:CGRectMake(0, 0, 29, 31)];
-    [self.navigationItem setTitleView:logo];
     [self.navigationController.view.layer setCornerRadius:10.0f];
     
     
     UIView *backView = [[UIView alloc] init];
-    [backView setBackgroundColor:[UIColor colorWithRed:208.0/255.0
-                                                 green:208.0/255.0
-                                                  blue:208.0/255.0
-                                                 alpha:1.0]];
+//    [backView setBackgroundColor:[UIColor colorWithRed:208.0/255.0
+//                                                 green:208.0/255.0
+//                                                  blue:208.0/255.0
+//                                                 alpha:1.0]];
+    [backView setBackgroundColor:[UIColor blueColor]];
+    
+    
     [self.tableView setBackgroundView:backView];
 }
 

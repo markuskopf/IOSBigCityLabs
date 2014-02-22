@@ -23,7 +23,6 @@
 #import "MMExampleCenterTableViewController.h"
 #import "MMSideDrawerTableViewCell.h"
 #import "MMSideDrawerSectionHeaderView.h"
-#import "MMLogoView.h"
 #import "MainNavigationViewController.h"
 
 @implementation MMExampleSideDrawerViewController
@@ -88,13 +87,6 @@
     
     self.drawerWidths = @[@(160),@(200),@(240),@(280),@(320)];
     
-    CGSize logoSize = CGSizeMake(58, 62);
-    MMLogoView * logo = [[MMLogoView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.tableView.bounds)-logoSize.width/2.0,
-                                                                     -logoSize.height-logoSize.height/4.0,
-                                                                     logoSize.width,
-                                                                     logoSize.height)];
-    [logo setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
-    [self.tableView addSubview:logo];
     [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
